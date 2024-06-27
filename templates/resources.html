@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Farm Resources</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Quantity</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for resource in resources %}
+            <tr>
+                <td>{{ resource[0] }}</td>
+                <td>{{ resource[1] }}</td>
+                <td>{{ resource[2] }}</td>
+                <td>{{ resource[3] }}</td>
+                <td>{{ resource[4] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
